@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - My First Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <center>
+        <img src="images/logo0.png" height="120" alt="Logo">
+      </center>
+    </div>
+    <hr>
+
+    <!-- Navigation -->
+    <div style="text-align: center;">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="images/banner.png" alt="Banner">
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="about-section">
+      <h1>About Us</h1>
+      <p>Hello! I'm Md Aoun, the creator of this website. This platform is part of my learning journey in web development and cybersecurity. I’ve designed it not just as a portfolio, but also as a space to share my goals and progress.</p>
+
+      <p>My passion began with coding simple HTML and CSS pages, and over time it evolved into a deeper interest in ethical hacking, system security, and Linux systems. This site represents my path from beginner web developer to aspiring ethical hacker.</p>
+
+      <h2>Our Mission</h2>
+      <p>To inspire beginners like myself to explore the world of ethical hacking, and to prove that anyone with curiosity and determination can master technical skills.</p>
+
+      <h2>Technologies We Explore</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Linux (Ubuntu, Kali Linux)</li>
+        <li>Web Application Security</li>
+        <li>Penetration Testing Tools (Nmap, Burp Suite, Metasploit)</li>
+        <li>Cybersecurity Labs & CTFs</li>
+      </ul>
+
+      <h2>Follow My Journey</h2>
+      <p>If you're just starting out or are curious about ethical hacking and cybersecurity, follow along with me! I'll continue to update this site with my progress, insights, and resources I discover.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2025 Pentara Solutions.pk</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Pentara Solutions.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo0.png" height="120" alt="Pentara Solutions Logo" class="logo__image">
+        </div>
+        <hr>
+        <!-- Navigation -->
+        <nav class="nav">
+            <button class="nav__toggle" id="navToggle">
+                <i class="fas fa-bars"></i></button>
+            <ul class="nav__list" id="navList">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="aboutus.html" class="nav__link">About Us</a></li>
+                <li class="nav__item"><a href="services.html" class="nav__link">Our Services</a></li>
+                <li class="nav__item"><a href="contactus.html" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="services-section">
+            <h1 class="services-heading">Our Cybersecurity Services</h1>
+            <p class="services-subtitle">Protecting your digital assets with cutting-edge security solutions</p>
+
+            <div class="services-grid">
+                <!-- Penetration Testing Card -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <ul>
+                        <li>Web Application Testing</li>
+                        <li>Network Vulnerability Assessment</li>
+                        <li>Wi-Fi Security Audits</li>
+                        <li>Social Engineering Simulations</li>
+                    </ul>
+                </div>
+
+                <!-- Security Consulting Card -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-secret fa-3x"></i>
+                    </div>
+                    <h3>Security Consulting</h3>
+                    <ul>
+                        <li>Security Architecture Review</li>
+                        <li>Compliance Audits (PCI-DSS, ISO 27001)</li>
+                        <li>Security Policy Development</li>
+                        <li>Incident Response Planning</li>
+                    </ul>
+                </div>
+
+                <!-- Training Card -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap fa-3x"></i>
+                    </div>
+                    <h3>Security Training</h3>
+                    <ul>
+                        <li>Ethical Hacking Workshops</li>
+                        <li>Secure Coding Practices</li>
+                        <li>Phishing Awareness Training</li>
+                        <li>Red Team/Blue Team Exercises</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-card">
+                <h2>Ready to Secure Your Business?</h2>
+                <p>Get a free initial consultation to discuss your security needs.</p>
+                <a href="contactus.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-3d">
+        <div class="footer__container">
+            <p>&copy; 2025 <span class="brand">Pentara Solutions.pk</span>. All rights reserved.</p>
+            <p class="tagline">Empowering Digital Transformation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Consistent menu toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navList = document.getElementById('navList');
+            
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // 3D card hover effects
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const angleX = (y - centerY) / 20;
+                    const angleY = (centerX - x) / 20;
+                    card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateZ(10px)';
+                });
+            });
+
+            // CTA Button Click Handler (New Addition)
+            const ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    ctaButton.classList.add('clicked');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Pentara Solutions.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo0.png" height="120" alt="Logo" class="logo__image">
+        </div>
+        <hr>
+        <!-- Navigation -->
+        <nav class="nav">
+            <button class="nav__toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav__list" id="navList">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="aboutus.html" class="nav__link">About Us</a></li>
+                <li class="nav__item"><a href="services.html" class="nav__link">Our Services</a></li>
+                <li class="nav__item"><a href="contactus.html" class="nav__link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <section class="contact-section">
+            <h1 class="contact-heading">Contact Me</h1>
+            <p class="contact-paragraph">
+                If you have any questions, suggestions, or just want to say hi, feel free to send me a message using the form below.
+            </p>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer__container">
+            <p>&copy; 2025 <span class="brand">Pentara Solutions.pk</span>. All rights reserved.</p>
+            <p class="tagline">Empowering Digital Transformation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced JavaScript for 3D effects and menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navList = document.getElementById('navList');
+
+            // Toggle menu
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // 3D hover effects for form elements (optional)
+            const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.parentElement.style.transform = 'translateZ(10px)';
+                });
+                input.addEventListener('blur', () => {
+                    input.parentElement.style.transform = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

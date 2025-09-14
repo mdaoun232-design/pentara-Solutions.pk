@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentara Solutions.pk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo0.png" height="120" alt="Logo" class="logo__image">
+        </div>
+        <hr>
+        <!-- Navigation -->
+        <nav class="nav">
+            <button class="nav__toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav__list" id="navList">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="aboutus.html" class="nav__link">About Us</a></li>
+                <li class="nav__item"><a href="services.html" class="nav__link">Our Services</a></li>
+                <li class="nav__item"><a href="contactus.html" class="nav__link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <section class="section">
+            <h1 class="first-heading">Welcome to my Website</h1>
+            <p class="first-paragraph">
+                Hello! My name is Md Aoun. I’m currently learning how to build websites using HTML and CSS. This website is one of my first projects where I’ve applied what I’ve learned to create a simple, clean, and functional design. I enjoy exploring how code can bring creative ideas to life on the web. Through this project, I’m improving my skills in front-end development, understanding the structure of web pages, and learning how to style them effectively. This is just the beginning of my journey into web development, and I’m excited to keep learning and building more. Thank you for visiting my site!
+            </p>
+        </section>
+        <!-- Other sections remain the same -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer__container">
+            <p>&copy; 2025 <span class="brand">Pentara Solutions.pk</span>. All rights reserved.</p>
+            <p class="tagline">Empowering Digital Transformation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced JavaScript for 3D effects and menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('navToggle');
+            const navList = document.getElementById('navList');
+
+            // Toggle menu
+            navToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // 3D hover effects for cards
+            const cards = document.querySelectorAll('.card-3d');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const angleX = (y - centerY) / 20;
+                    const angleY = (centerX - x) / 20;
+                    card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(20px)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(-10px) translateZ(20px)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
